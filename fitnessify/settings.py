@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     # third-party apps
     'rest_framework',
     'knox',
-    'rest_framework_swagger',
 
     # Local
     'accounts.apps.AccountsConfig',
