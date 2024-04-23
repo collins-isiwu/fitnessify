@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*w48fa0y2hvxgo3(ed17@l!6k$yef16lk0f2#&h9*-^mug&ur8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['fitnessify.pythonanywhere.com']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 
 # Development Environment
@@ -88,11 +88,23 @@ WSGI_APPLICATION = 'fitnessify.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+"default": {
+"ENGINE": "django.db.backends.postgresql",
+"NAME": "railway",
+"USER": "postgres",
+"PASSWORD": "udKXCfFxHnPVVbYgROHhhRlVLvSTzkXx",
+"HOST": "roundhouse.proxy.rlwy.net", 
+"PORT": 18721, 
 }
+}
+
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
 
 
 # Password validation
@@ -130,6 +142,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
