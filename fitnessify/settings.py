@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*w48fa0y2hvxgo3(ed17@l!6k$yef16lk0f2#&h9*-^mug&ur8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['fitnessify-f76u.onrender.com','127.0.0.1', 'localhost']
 
 
 # Development Environment
